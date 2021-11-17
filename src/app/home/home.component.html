@@ -1,0 +1,68 @@
+<div class="container">
+  <h2 class="demo">HomeComponent.html</h2>
+  <h3>
+    Add Text in Home Component
+    <br />
+    => It's will change in App.component.html
+  </h3>
+
+  <h4>
+    I'm <span class="tentao">{{ name | uppercase }}</span> đang test Data
+    Binding
+  </h4>
+  <h4>
+    Bây giờ cũng được
+    <span class="tuoitao">{{ age | number: "1.0-2" }}</span> nồi bánh trưng rồi
+  </h4>
+
+  <input [(ngModel)]="name" />
+  <br />
+  <br />
+
+  <span>Test IF</span>
+  <br />
+  <!-- If else đời mới hơn -->
+  <span
+    *ngIf="age < 22; then condition1; else condition2"
+    class="underAge"
+  ></span>
+
+  <ng-template #condition1 class="underAge" [ngOutletContext]=""
+    >Đạt dưới 22 tuổi</ng-template
+  >
+  <ng-template #condition2 class="overAge" [ngOutletContext]=""
+    >Đạt trên 22 tuổi</ng-template
+  >
+
+  <br />
+  <span *ngIf="age >= 22" class="overAge">Đạt trên 22 tuổi mất rồi</span>
+  <br />
+
+  <!-- Cách khác
+<span *ngIf="age < 22" class="underAge">Đạt dưới 22 tuổi</span>
+<br />
+<span *ngIf="age >= 22" class="overAge">Đạt trên 22 tuổi mất rồi</span>
+<br /> -->
+
+  <button (click)="tangTuoi()" appBold>Tăng Tuổi</button>
+  <!-- Sự kiện click trong Angular  -->
+
+  <br /><br />
+
+  Danh sách cầu thủ: (Sử dụng For) <br />
+  <div *ngFor="let player of players">
+    <li>{{ player }}</li>
+  </div>
+
+  <br />
+
+  Dùng Select:
+  <select>
+    <option value="" *ngFor="let player of players">
+      {{ player }}
+    </option>
+  </select>
+  <br />
+  <br />
+  <span>{{ players | json }}</span>
+</div>

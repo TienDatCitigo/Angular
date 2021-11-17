@@ -1,0 +1,48 @@
+{
+  "students":[
+    {
+      "id": 1,
+      "code": "2017605719",
+      "gender":"male",
+      "firstName":"Đạt",
+      "lastName":"Nguyễn",
+      "dob":"17/05/1999",
+      "email":"datdiegofc@gmail.com",
+      "phone":"0157459858",
+      "picture":""
+  }],
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    },
+    {
+      "id": 2,
+      "body": "some status",
+      "postId": 2
+    },
+    {
+      "body": "some status 3",
+      "postId": 3,
+      "id": 8
+    },
+    {
+      "body": "some status 3",
+      "postId": 3,
+      "id": 9
+    }
+  ],
+  "profile": {
+    "name": "typicode",
+    "age": 22,
+    "gender": "male"
+  }
+}

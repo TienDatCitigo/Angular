@@ -1,0 +1,50 @@
+<div class="container">
+  <h2>Tìm hiểu về Form Angular</h2>
+  <form (ngSubmit)="onSubmit()" #myForm="ngForm">
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input
+        type="text"
+        class="form-control"
+        id="name"
+        required
+        [(ngModel)]="name"
+        name="name"
+      />
+      <span *ngIf="name === ''">Cần nhập tên</span>
+    </div>
+
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input
+        type="password"
+        class="form-control"
+        id="password"
+        [(ngModel)]="password"
+        name="password"
+      />
+      <span *ngIf="password == ''">Cần nhập mật khẩu</span>
+    </div>
+
+    <br />
+    <div class="form-group">
+      <label for="player">Dùng Select:</label>
+      <br />
+
+      <select (change)="selectPlayer($event)">
+        <option value="{{ player }}" *ngFor="let player of players">
+          <!-- value = "{{ player }}": có cũng được mà ko cũng đc  -->
+          {{ player }}
+        </option>
+      </select>
+    </div>
+
+    <button
+      type="submit"
+      class="btn btn-success"
+      [disabled]="!myForm.form.valid"
+    >
+      Submit
+    </button>
+  </form>
+</div>
