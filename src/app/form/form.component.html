@@ -1,5 +1,5 @@
 <div class="container">
-  <h2>Tìm hiểu về Form Angular</h2>
+  <h2>Form Angular</h2>
   <form (ngSubmit)="onSubmit()" #myForm="ngForm">
     <div class="form-group">
       <label for="name">Name</label>
@@ -33,7 +33,6 @@
 
       <select (change)="selectPlayer($event)">
         <option value="{{ player }}" *ngFor="let player of players">
-          <!-- value = "{{ player }}": có cũng được mà ko cũng đc  -->
           {{ player }}
         </option>
       </select>
