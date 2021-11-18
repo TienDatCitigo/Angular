@@ -6,8 +6,8 @@ import { Directive, ElementRef, Renderer2 } from '@angular/core';
 })
 export class BoldDirective {
   constructor(private element: ElementRef, private render: Renderer2) {
-    render.setStyle(element.nativeElement, 'color', 'white');
-    render.setStyle(element.nativeElement, 'background-color', 'blue');
+    render.setStyle(element.nativeElement, 'color', 'blue');
+    render.setStyle(element.nativeElement, 'background-color', 'yellow');
     render.setStyle(element.nativeElement, 'display', 'inline-block');
   }
 }

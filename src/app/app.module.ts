@@ -4,10 +4,9 @@ import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-
 //import Angular Material
 import { MatCardModule } from '@angular/material/card';
-import { MatButtonModule} from '@angular/material/button';
+import { MatButtonModule } from '@angular/material/button';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatListModule } from '@angular/material/list';
@@ -16,7 +15,6 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatInputModule } from '@angular/material/input';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatIconModule } from '@angular/material/icon';
-
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -31,6 +29,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { PostDataComponent } from './post-data/post-data.component';
 import { StudentsComponent } from './students/students.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { ChaComponent } from './cha/cha.component';
+import { ConComponent } from './con/con.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +44,9 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     GetDataComponent,
     PostDataComponent,
     StudentsComponent,
-    DashboardComponent
+    DashboardComponent,
+    ChaComponent,
+    ConComponent,
   ],
   imports: [
     BrowserModule,
@@ -62,9 +64,9 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     MatSidenavModule,
     MatInputModule,
     MatExpansionModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
