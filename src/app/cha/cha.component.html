@@ -1,1 +1,8 @@
-<p>cha works!</p>
+<hr />
+<p class="demo">Component Cha</p>
+<p class="demo1">{{ chatMessage }}</p>
+<app-con #thangTien name="Tiến" (conGoi)="conGoi($event)"></app-con>
+<br /><br />
+<app-con #thangDat name="Đạtt" (conGoi)="conGoi($event)"></app-con>
+<br /><br />
+<button (click)="xinTien()">Cho nó tiền</button>

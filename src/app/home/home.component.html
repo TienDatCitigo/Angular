@@ -46,15 +46,14 @@
   <button (click)="tangTuoi()" appBold>Tăng Tuổi</button>
   <!-- Sự kiện click trong Angular  -->
 
-  <br /><br />
-
+  <br />
+  <hr />
   Danh sách cầu thủ: (Sử dụng For) <br />
   <div *ngFor="let player of players">
     <li>{{ player }}</li>
   </div>
 
-  <br />
-
+  <hr />
   Dùng Select:
   <select>
     <option value="" *ngFor="let player of players">
@@ -63,6 +62,7 @@
   </select>
   <br />
   <br />
+  <span>Xuất file Json: </span>
   <span>{{ players | json }}</span>
 
   <app-cha></app-cha>
